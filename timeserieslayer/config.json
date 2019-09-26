@@ -1,3 +1,4 @@
 {
-    "webserver": "localHost:8787"
+    "webserver": "localHost:8787",
+    "mongoKey": "mongodb+srv://keithkfield:Icecat12!@goconnect-glenv.mongodb.net/test?retryWrites=true&w=majority"
 }
