@@ -82,6 +82,12 @@ func main() {
 	// To delete a secific element with flter
 	filter := bson.M{"nickname": "Joey"}
 	collection.DeleteOne(context.Background(), filter)
+	filterTwo := bson.M{"nickname": "Billy"}
+	collection.DeleteMany(context.Background(), filterTwo)
+	// Updating the database
+	filterThree := bson.M{"nickname": "Piggie"}
+	collection.UpdateOne(context.Background(), filterThree, bson.D{
+		{"$set", bson.D{{"age", 33}}}})
 
 	// fmt.Println("Inserted a single document: ", insertResult.InsertedID)
 	fmt.Println("Connected to MongoDB!")
